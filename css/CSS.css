@@ -15,16 +15,18 @@ nav{
 	background-color: white;
 	box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
 	
+	
 }
 nav ul{
 	width:100%;
 	list-style: none;
 	display: flex;
 	justify-content: flex-end;
-	align-items: center;
-	
 	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
 	font-weight: bold;
+	position: fixed;
+	background-color: white;
+	
 }
 nav li{
 	height: 50px;
@@ -102,6 +104,62 @@ mt5{
 .sp h3{
 	color: #311415;
 }
+/*Trang san pham*/
+
+/*Trang Lien He*/
+
+.khungLienHe a{
+	margin: 10px;
+}
+.iconZalo{
+	margin-left: 10px;
+}
+
+.contact-form{
+	text-align: left;
+	
+}
+.contact-form h3{
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #333;
+}
+.form-group{
+	margin-bottom: 20px;
+}
+input, textarea{
+	width: 100%;
+	padding:12px;
+	border-radius: 8px;
+	
+	background-color: #f8f9fa;
+	color: #333;
+	
+}
+button{
+	display: inline-block;
+	padding:12px 24px;
+	background-color: #4caf50;
+	color:#fff;
+	border: none;
+	cursor:pointer;
+}
+button:hover{
+	background-color:#45a049
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Footer*/
 .full {
     width: 100%;    
