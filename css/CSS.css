@@ -176,8 +176,8 @@ div.item img{ width:100%;}
 	
 }
 .popup-content{
-	height: 500px;
-	width:500px;
+	height: 600px;
+	width:600px;
 	background: #fff;
 	padding: 20px;
 	border-radius: 5px;
@@ -193,6 +193,11 @@ div.item img{ width:100%;}
 	
 }
 
+span{
+     color:red;
+     display: block;
+     padding: 5px 0px;
+}
 
 
 
@@ -280,8 +285,18 @@ div.item img{ width:100%;}
 	display: inline;
 	margin: 0px 5px;
 }
-
-
+/*Go to top*/
+a#gototop{
+	text-decoration:none;
+	display:block;
+	padding:10px 30px;
+	background-color:rgba(0,0,255,0.6);
+	color:white;
+	position:fixed;
+	right:15px;
+	bottom:15px;
+	z-index:9999;
+	display:none;}
 
 
 
