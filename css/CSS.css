@@ -205,9 +205,7 @@ span{
 
 
 /*Footer*/
-.full {
-    width: 100%;    
-}
+
 
 .footer {
   background: #002147;
@@ -262,7 +260,7 @@ span{
 .footer p {
   color: white;
   font-weight: lighter;
-  font-size: 
+
 }
 
 .footer a:hover {
@@ -277,10 +275,7 @@ span{
   padding-top: 20px;
   padding-bottom: 10px;
 }
-.footer-bottom p.pull-left {
-  padding-top: 6px;
-  font-size: 0.75em
-}
+
 .payment li{
 	display: inline;
 	margin: 0px 5px;
