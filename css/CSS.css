@@ -78,11 +78,11 @@ nav li:first-child{
 	display: none;
 }
 /*Main*/
-m10{
+.m10{
 	margin: 10px 0px; 
 	
 }
-mt5{
+.mt5{
 	margin-top: 50px
 }
 .center{
