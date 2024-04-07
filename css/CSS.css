@@ -131,10 +131,8 @@ input, textarea{
 	width: 100%;
 	padding:12px;
 	border-radius: 8px;
-	
 	background-color: #f8f9fa;
 	color: #333;
-	
 }
 button{
 	display: inline-block;

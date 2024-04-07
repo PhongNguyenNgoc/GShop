@@ -5,13 +5,15 @@
 	<meta name="viewport" content="width=device-width, innitial-scale=1.0">
 	
 	<title>PS5</title>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/CSS.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
+	
 	
 </head>
 
 <body>
+	
 	<!-----------Navigation bar-------------->
 	<nav>
 		<ul class="sidebar">
@@ -66,11 +68,70 @@
 				</ul>
 				<button type="submit" id="btn_DatMuaHang">ĐẶT MUA</button>
 				
+				<!---Cau hinh---->
+				<hr>
 				
-				
-				
+				<div class="table-responsive">
+ 					<table class="table table-striped">
+    					<tr>
+							<th colspan="2">Thông số kỹ thuật</th>
+						</tr>
+						<tr>
+							<td>CPU</td>
+							<td>AMD Zen 2 8 nhân 16 luồng, xung nhịp 3.5GHz</td>
+						</tr>
+						<tr>
+							<td>GPU</td>
+							<td>Kiến trúc RDNA 2 của AMD, sức mạnh 10.3 TFLOPS, tốc độ 2.23GHz, hỗ trợ Ray-Tracing</td>
+						</tr>
+						<tr>
+							<td>RAM</td>
+							<td>GDDR6 16GB</td>
+						</tr>
+						<tr>
+							<td>Bộ nhớ trong</td>
+							<td>825GB SSD tốc độ đạt 5,5 GB/s</td>
+						</tr>
+						<tr>
+							<td>Tính năng mới</td>
+							<td>Hỗ trợ Ray-Tracing, hỗ trợ chơi game 8K 120Hz, âm thanh vòm 3D audio, tương thích ngược với game PS4</td>
+						</tr>
+  					</table>
+				</div>
 				
 			</div>
+		</div>
+		 <hr>
+		 <div class="row">
+			<div class="col-lg-12 center">
+				<h4 style="color:blue;font-size: 20px;font-family: Arial;font-weight: bold">MUA THÊM PHỤ KIỆN?</h4>
+				<img src="pic/index/bg_tde.gif">
+			</div>
+			<!----------sp------------->
+			<div class="col-lg-3 col-sm-6 sp"><a href="#">
+					<img src="pic/index/pk1.jpg" width=200px height=200px/>
+					<h3 class="tieude">Playstation Portal for PS5</h3>
+					<p>8 100 000 đ</p>
+				</a>
+				</div>
+			<div class="col-lg-3  col-sm-6 sp"><a href="#">
+					<img src="pic/index/pk2.jpg" width=200px height=200px/>
+					<h3 class="tieude"> DualSense - PS5 Controller</h3>
+					<p>1 600 000 đ</p>
+				</a>
+				</div>
+			<div class="col-lg-3 col-sm-6 sp"><a href="#">
+					<img src="pic/index/pk3.jpg" width=200px height=200px/>
+					<h3 class="tieude">Đế tay tay cầm PS5</h3>
+					<p>850 000 đ</p>
+				</a>
+				</div>
+			<div class="col-lg-3 col-sm-6 sp"><a href="PS5.html">
+					<img src="pic/index/pk4.jpg" width=200px height=200px/>
+					<h3 class="tieude">Giá đỡ PS5</h3>
+					<p>680 000 đ</p>
+				</a>
+				</div>
 		</div>
 		
 	
@@ -89,7 +150,15 @@
 				<input type="text" placeholder="Số điện thoại" class="inputOrder" id="txt_SDT">
 				<span id="SDT_error"></span>
 				<input type="text" value="PS5" class="inputOrder" disabled>
-				<input type="text" value="Thanh toán bằng:Thanh toán khi giao hàng" class="inputOrder" disabled>
+				<select class="form-select" aria-label="Default select example" id="PAY">
+  					<option selected value="0">Thanh toán bằng (mời chọn)</option>
+  					<option value="1">Ví điện tử MoMo</option>
+  					<option value="2">Ví điện tử Zalo Pay</option>
+  					<option value="3">ATM (Credit/Debit Card)</option>
+					<option value="3">Chuyển khoản ngân hàng</option>
+					<option value="3">COD (Thanh toán khi nhận hàng)</option>
+				</select>
+				<span id="PAY_error"></span>
 				<br>
 				<button type="button" onClick="return validate();">Đặt hàng</button>
 						
@@ -100,7 +169,7 @@
 	
 	
 		  
-	
+	<div><a href="javascript:;" id="gototop" href="" >GO TO TOP</a></div>
 	<!----------Footter--------->
 	<footer>
     <div class="footer" id="footer">
@@ -136,13 +205,12 @@
                
             <!--/.row--> 
         </div>
+				
         <!--/.container--> 
     </div>
     <!--/.footer-->
                           
-    <div class="footer-bottom">
-        <div class="container">
-            <p class="pull-left copyright"> Trang web được thiết kế bởi Phong23 </p>
+  
        
         </div>
     </div>
@@ -210,12 +278,38 @@
                     showError('DiaChi', 'Vui lòng kiểm tra lại Địa Chỉ');
 										
                 }
+				var pay=getValue('PAY');
+				if(pay==0){
+					flag = false;
+                    showError('PAY', 'Bạn phải chọn phương thức thanh toán');
+				}
 				if(flag==true){
 					document.querySelector(".popup").style.display="none";
 					
 					alert('Đặt hàng thành công, chúng tôi sẽ liên lạc lại với bạn để xác nhận đơn hàng');
 				}
+	
+			
 			}
+				//Truot ve dau trang 
+				$(document).ready(function() {
+    			$("#gototop").hide()
+				$(window).scroll(function(){
+			// de xem kich thuoc man hinh
+			//vao console
+			//$(window).scrollTop()
+			if($(this).scrollTop()>=100)
+		 		$("#gototop").show("slow")
+			else
+				$("#gototop").hide("slow")
+	})
+	//truot ve dau
+			$("#gototop").click(function(){
+				$("html,body").animate({
+					scrollTop:0
+			},1000);
+	})
+});
 	</script>
 </body>
 </html>
